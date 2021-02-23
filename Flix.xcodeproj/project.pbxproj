@@ -153,8 +153,6 @@
 				8BADB0D925DAFB20001B4257 /* SceneDelegate.swift */,
 				8BADB0E025DAFB23001B4257 /* Assets.xcassets */,
 				8BADB0E525DAFB23001B4257 /* Info.plist */,
-				8BADB11825DB0F31001B4257 /* MovieCell.swift */,
-				8BDCCB2225DC473B00CB4C85 /* MovieCollectionViewCell.swift */,
 			);
 			path = Flix;
 			sourceTree = "<group>";
@@ -190,8 +188,10 @@
 			isa = PBXGroup;
 			children = (
 				8BADB10D25DAFEA8001B4257 /* MoviesViewController.swift */,
-				8BADB12D25DBA105001B4257 /* MovieDetailsViewController.swift */,
 				8BDCCB0F25DC37DC00CB4C85 /* MovieGridViewController.swift */,
+				8BDCCB2225DC473B00CB4C85 /* MovieCollectionViewCell.swift */,
+				8BADB12D25DBA105001B4257 /* MovieDetailsViewController.swift */,
+				8BADB11825DB0F31001B4257 /* MovieCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

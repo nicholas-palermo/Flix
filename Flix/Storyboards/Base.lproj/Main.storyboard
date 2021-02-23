@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gXr-dX-na7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gXr-dX-na7">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -143,8 +143,9 @@
                                     <constraint firstAttribute="width" secondItem="5ka-nq-NrL" secondAttribute="height" multiplier="214:125" id="5Nc-9V-Rtk"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kqw-I2-UZf">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kqw-I2-UZf">
                                 <rect key="frame" x="12" y="275.66666666666669" width="139" height="221"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="139" id="Ttq-98-ITR"/>
                                     <constraint firstAttribute="width" secondItem="kqw-I2-UZf" secondAttribute="height" multiplier="139:221" id="bZm-h7-bzF"/>
@@ -294,7 +295,9 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUb-eT-W8j">
                                 <rect key="frame" x="20" y="511.66666666666669" width="388" height="81.333333333333314"/>
+                                <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="311" id="0jE-s3-KXU"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="81.329999999999998" id="wHP-Io-tSI"/>
                                 </constraints>
                                 <string key="text">This is where the synopsis will load on the given movie retrived from the movie database API. This text is simply a place holder to demonstrate how text looks within the view controller.</string>
@@ -324,22 +327,20 @@
                                     <constraint firstAttribute="width" secondItem="pov-HC-zg9" secondAttribute="height" multiplier="214:125" id="Eze-ci-7XV"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m9g-L7-klB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOW-Ga-5hi">
+                                <rect key="frame" x="159" y="352" width="249" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m9g-L7-klB">
                                 <rect key="frame" x="12" y="275.66666666666669" width="139" height="221"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="139" id="oD9-Xo-Aiy"/>
                                     <constraint firstAttribute="width" secondItem="m9g-L7-klB" secondAttribute="height" multiplier="139:221" id="tqw-zD-3qb"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOW-Ga-5hi">
-                                <rect key="frame" x="159" y="352" width="249" height="26.333333333333314"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="249" id="osg-E4-kmb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZZ5-fJ-OXq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -359,9 +360,11 @@
                             <constraint firstItem="pov-HC-zg9" firstAttribute="top" secondItem="ZZ5-fJ-OXq" secondAttribute="top" id="blK-QI-7un"/>
                             <constraint firstItem="JwC-J9-lg5" firstAttribute="leading" secondItem="m9g-L7-klB" secondAttribute="trailing" constant="8" id="eos-wq-trp"/>
                             <constraint firstItem="4eE-98-Ksg" firstAttribute="leading" secondItem="m9g-L7-klB" secondAttribute="trailing" constant="8" id="ivu-o3-Dr7"/>
+                            <constraint firstItem="sOW-Ga-5hi" firstAttribute="leading" secondItem="m9g-L7-klB" secondAttribute="trailing" constant="8" id="iwc-UX-miG"/>
                             <constraint firstItem="JwC-J9-lg5" firstAttribute="top" secondItem="sOW-Ga-5hi" secondAttribute="bottom" constant="10" id="k7N-oJ-xHY"/>
                             <constraint firstItem="ZZ5-fJ-OXq" firstAttribute="trailing" secondItem="JwC-J9-lg5" secondAttribute="trailing" constant="28" id="ncQ-s2-4UH"/>
                             <constraint firstItem="NUb-eT-W8j" firstAttribute="top" secondItem="m9g-L7-klB" secondAttribute="bottom" constant="15" id="r0h-Ve-29H"/>
+                            <constraint firstItem="NUb-eT-W8j" firstAttribute="top" secondItem="m9g-L7-klB" secondAttribute="bottom" constant="15" id="yqC-Bi-7Kt"/>
                             <constraint firstItem="pov-HC-zg9" firstAttribute="top" secondItem="ZZ5-fJ-OXq" secondAttribute="top" id="z4d-81-qPE"/>
                         </constraints>
                     </view>
